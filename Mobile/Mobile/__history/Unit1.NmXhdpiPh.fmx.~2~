@@ -1,0 +1,11 @@
+inherited FrmMain_NmXhdpiPh: TFrmMain_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited StyleBook1: TStyleBook
+    UseStyleManager = True
+    Styles = <
+      item
+      end>
+  end
+end

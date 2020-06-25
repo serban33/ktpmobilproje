@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.231,C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit1.fmx=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,=C:\WorkSpace\Projects\C#\WebApi\Mobile\datalar.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.210,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.423,C:\WorkSpace\Projects\C#\WebApi\Mobile\Kth1.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.231,C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit1.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020.06.22 12:36:22.876,=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:36:33.469,C:\WorkSpace\Projects\C#\WebApi\Mobile\AnaForm.pas=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:36:33.469,C:\WorkSpace\Projects\C#\WebApi\Mobile\AnaForm.fmx=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.fmx</Transaction>
+    <Transaction>2020.06.22 12:44:39.230,=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:44:48.798,C:\WorkSpace\Projects\C#\WebApi\Mobile\KitapListesi.pas=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:44:48.798,C:\WorkSpace\Projects\C#\WebApi\Mobile\KitapListesi.fmx=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.fmx</Transaction>
+    <Transaction>2020.06.22 12:46:55.419,=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:47:05.104,C:\WorkSpace\Projects\C#\WebApi\Mobile\KategoriListesi.pas=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:47:05.104,C:\WorkSpace\Projects\C#\WebApi\Mobile\KategoriListesi.fmx=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.fmx</Transaction>
+    <Transaction>2020.06.22 12:51:07.912,=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:51:17.328,C:\WorkSpace\Projects\C#\WebApi\Mobile\KullaniciKitaplari.pas=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 12:51:17.328,C:\WorkSpace\Projects\C#\WebApi\Mobile\KullaniciKitaplari.fmx=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.fmx</Transaction>
+    <Transaction>2020.06.22 13:42:22.102,=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 13:42:28.993,C:\WorkSpace\Projects\C#\WebApi\Mobile\YeniKitap.pas=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 13:42:28.993,C:\WorkSpace\Projects\C#\WebApi\Mobile\YeniKitap.fmx=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.fmx</Transaction>
+    <Transaction>2020.06.22 13:58:23.815,=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 13:58:32.407,C:\WorkSpace\Projects\C#\WebApi\Mobile\KullaniciKitapEkle.pas=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.pas</Transaction>
+    <Transaction>2020.06.22 13:58:32.407,C:\WorkSpace\Projects\C#\WebApi\Mobile\KullaniciKitapEkle.fmx=C:\WorkSpace\Projects\C#\WebApi\Mobile\Unit2.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,88 @@
+object FrmMain: TFrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 274.000000000000000000
+    Size.Height = 274.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Top
+      Margins.Top = 20.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 274.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Kullan'#305'c'#305' Ad'#305
+      TabOrder = 1
+    end
+    object TxtKullaniciAdi: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 3
+      Position.Y = 48.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Size.Width = 274.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label2: TLabel
+      Align = Top
+      Margins.Top = 20.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 274.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = #350'ifre'
+      TabOrder = 0
+    end
+    object TxtSifre: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 2
+      Position.Y = 128.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Size.Width = 274.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Panel1: TPanel
+      Align = Top
+      Position.Y = 160.000000000000000000
+      Size.Width = 274.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object BtnGiris: TButton
+        Align = Left
+        Size.Width = 129.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Giri'#351
+      end
+      object BtnCikis: TButton
+        Align = Right
+        Position.X = 152.000000000000000000
+        Size.Width = 122.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Kapat'
+      end
+    end
+  end
+  object StyleBook1: TStyleBook
+    Styles = <>
+    Left = 56
+    Top = 96
+  end
+end

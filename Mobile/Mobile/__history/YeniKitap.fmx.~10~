@@ -1,0 +1,128 @@
+object FrmYeniKitap: TFrmYeniKitap
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  StyleBook = FrmMain.StyleBook1
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'replytoolbutton'
+      TabOrder = 0
+      Text = 'Button1'
+    end
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 322.000000000000000000
+    Size.Height = 402.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label1: TLabel
+      Align = Top
+      Margins.Top = 5.000000000000000000
+      Position.Y = 70.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Kitap Kategori'
+      TabOrder = 4
+    end
+    object CmbKategori: TComboBox
+      Align = Top
+      Position.Y = 98.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+    end
+    object Label2: TLabel
+      Align = Top
+      Margins.Top = 5.000000000000000000
+      Position.Y = 135.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Yazar'
+      TabOrder = 3
+    end
+    object TxtYazar: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 9
+      Position.Y = 163.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Align = Top
+      Margins.Top = 5.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Konu'
+      TabOrder = 2
+    end
+    object TxtYayinEvi: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 8
+      Position.Y = 293.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label4: TLabel
+      Align = Top
+      Margins.Top = 5.000000000000000000
+      Position.Y = 265.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Yay'#305'n Evi'
+      TabOrder = 1
+    end
+    object TxtKonu: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 5
+      Position.Y = 228.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label5: TLabel
+      Align = Top
+      Margins.Top = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Ad'#305
+      TabOrder = 0
+    end
+    object TxtAd: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 6
+      Position.Y = 33.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end

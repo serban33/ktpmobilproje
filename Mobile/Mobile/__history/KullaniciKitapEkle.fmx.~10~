@@ -1,0 +1,120 @@
+object FrmKullaniciKitapEkle: TFrmKullaniciKitapEkle
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  StyleBook = FrmMain.StyleBook1
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'replytoolbutton'
+      TabOrder = 0
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 322.000000000000000000
+    Size.Height = 226.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 312.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Kitap Se'#231
+      TabOrder = 1
+    end
+    object CmbKitap: TComboBox
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 312.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object Label2: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 70.000000000000000000
+      Size.Width = 312.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Kullan'#305'c'#305' Se'#231
+      TabOrder = 0
+    end
+    object Panel1: TPanel
+      Align = Top
+      Margins.Top = 5.000000000000000000
+      Position.Y = 135.000000000000000000
+      Size.Width = 322.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object Button2: TButton
+        Align = Left
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 140.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        Text = 'Kaydet'
+      end
+      object Button3: TButton
+        Align = Right
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 184.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        Text = 'Vazge'#231
+      end
+    end
+    object CmbKullanici: TComboBox
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 98.000000000000000000
+      Size.Width = 312.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+  end
+end

@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DbkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblKategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblKitaplar">
+          <Key>
+            <PropertyRef Name="KitapId" />
+          </Key>
+          <Property Name="KitapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriId" Type="int" />
+          <Property Name="Yazar" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Konu" Type="nvarchar" MaxLength="50" />
+          <Property Name="YayınEvi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Konusu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblKullanici">
+          <Key>
+            <PropertyRef Name="KullaniciId" />
+          </Key>
+          <Property Name="KullaniciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblKullaniciKitaplar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciId" Type="int" />
+          <Property Name="VerilmeTarihi" Type="date" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="TC" Type="nvarchar" MaxLength="11" />
+          <Property Name="TelefonNumarasi" Type="nvarchar" MaxLength="12" />
+          <Property Name="KitapId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Dbk.dbo.VwKullaniciKitapListesi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VwKullaniciKitapListesi">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Yazar" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="KullaniciId" Type="int" />
+          <Property Name="VerilmeTarihi" Type="date" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="TC" Type="nvarchar" MaxLength="11" />
+          <Property Name="TelefonNumarasi" Type="nvarchar" MaxLength="12" />
+          <Property Name="KitapId" Type="int" />
+          <Property Name="KategoriId" Type="int" />
+          <Property Name="Yazar" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Konu" Type="nvarchar" MaxLength="50" />
+          <Property Name="YayınEvi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Konusu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Dbk.dbo.VwKullanicilar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VwKullanicilar">
+          <Key>
+            <PropertyRef Name="KullaniciId" />
+          </Key>
+          <Property Name="KullaniciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="DbkModelStoreContainer">
+          <EntitySet Name="TblKategori" EntityType="Self.TblKategori" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblKitaplar" EntityType="Self.TblKitaplar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblKullanici" EntityType="Self.TblKullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblKullaniciKitaplar" EntityType="Self.TblKullaniciKitaplar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VwKullaniciKitapListesi" EntityType="Self.VwKullaniciKitapListesi" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwKullaniciKitapListesi].[Id] AS [Id], 
+    [VwKullaniciKitapListesi].[KullaniciId] AS [KullaniciId], 
+    [VwKullaniciKitapListesi].[VerilmeTarihi] AS [VerilmeTarihi], 
+    [VwKullaniciKitapListesi].[AdSoyad] AS [AdSoyad], 
+    [VwKullaniciKitapListesi].[TC] AS [TC], 
+    [VwKullaniciKitapListesi].[TelefonNumarasi] AS [TelefonNumarasi], 
+    [VwKullaniciKitapListesi].[KitapId] AS [KitapId], 
+    [VwKullaniciKitapListesi].[KategoriId] AS [KategoriId], 
+    [VwKullaniciKitapListesi].[Yazar] AS [Yazar], 
+    [VwKullaniciKitapListesi].[Konu] AS [Konu], 
+    [VwKullaniciKitapListesi].[YayınEvi] AS [YayınEvi], 
+    [VwKullaniciKitapListesi].[Konusu] AS [Konusu], 
+    [VwKullaniciKitapListesi].[Ad] AS [Ad]
+    FROM [dbo].[VwKullaniciKitapListesi] AS [VwKullaniciKitapListesi]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VwKullanicilar" EntityType="Self.VwKullanicilar" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwKullanicilar].[KullaniciId] AS [KullaniciId], 
+    [VwKullanicilar].[KullaniciAdi] AS [KullaniciAdi]
+    FROM [dbo].[VwKullanicilar] AS [VwKullanicilar]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblKategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblKitaplar">
+          <Key>
+            <PropertyRef Name="KitapId" />
+          </Key>
+          <Property Name="KitapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriId" Type="Int32" />
+          <Property Name="Yazar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YayınEvi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Konusu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblKullanici">
+          <Key>
+            <PropertyRef Name="KullaniciId" />
+          </Key>
+          <Property Name="KullaniciId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblKullaniciKitaplar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciId" Type="Int32" />
+          <Property Name="VerilmeTarihi" Type="DateTime" Precision="0" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="TelefonNumarasi" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="KitapId" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="DbkEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblKategori" EntityType="Self.TblKategori" />
+          <EntitySet Name="TblKitaplar" EntityType="Self.TblKitaplar" />
+          <EntitySet Name="TblKullanici" EntityType="Self.TblKullanici" />
+          <EntitySet Name="TblKullaniciKitaplar" EntityType="Self.TblKullaniciKitaplar" />
+          <EntitySet Name="VwKullaniciKitapListesi" EntityType="DbkModel.VwKullaniciKitapListesi" />
+          <EntitySet Name="VwKullanicilar" EntityType="DbkModel.VwKullanicilar" />
+        </EntityContainer>
+        <EntityType Name="VwKullaniciKitapListesi">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Yazar" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="KullaniciId" Type="Int32" />
+          <Property Name="VerilmeTarihi" Type="DateTime" Precision="0" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="TelefonNumarasi" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="KitapId" Type="Int32" />
+          <Property Name="KategoriId" Type="Int32" />
+          <Property Name="Yazar" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YayınEvi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Konusu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VwKullanicilar">
+          <Key>
+            <PropertyRef Name="KullaniciId" />
+          </Key>
+          <Property Name="KullaniciId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbkModelStoreContainer" CdmEntityContainer="DbkEntities">
+          <EntitySetMapping Name="TblKategori">
+            <EntityTypeMapping TypeName="DbkModel.TblKategori">
+              <MappingFragment StoreEntitySet="TblKategori">
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblKitaplar">
+            <EntityTypeMapping TypeName="DbkModel.TblKitaplar">
+              <MappingFragment StoreEntitySet="TblKitaplar">
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="Yazar" ColumnName="Yazar" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+                <ScalarProperty Name="YayınEvi" ColumnName="YayınEvi" />
+                <ScalarProperty Name="Konusu" ColumnName="Konusu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblKullanici">
+            <EntityTypeMapping TypeName="DbkModel.TblKullanici">
+              <MappingFragment StoreEntitySet="TblKullanici">
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblKullaniciKitaplar">
+            <EntityTypeMapping TypeName="DbkModel.TblKullaniciKitaplar">
+              <MappingFragment StoreEntitySet="TblKullaniciKitaplar">
+                <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="VerilmeTarihi" ColumnName="VerilmeTarihi" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="TelefonNumarasi" ColumnName="TelefonNumarasi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwKullaniciKitapListesi">
+            <EntityTypeMapping TypeName="DbkModel.VwKullaniciKitapListesi">
+              <MappingFragment StoreEntitySet="VwKullaniciKitapListesi">
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Konusu" ColumnName="Konusu" />
+                <ScalarProperty Name="YayınEvi" ColumnName="YayınEvi" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+                <ScalarProperty Name="Yazar" ColumnName="Yazar" />
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+                <ScalarProperty Name="TelefonNumarasi" ColumnName="TelefonNumarasi" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="VerilmeTarihi" ColumnName="VerilmeTarihi" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwKullanicilar">
+            <EntityTypeMapping TypeName="DbkModel.VwKullanicilar">
+              <MappingFragment StoreEntitySet="VwKullanicilar">
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

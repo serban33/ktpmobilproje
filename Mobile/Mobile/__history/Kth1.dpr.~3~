@@ -1,0 +1,15 @@
+program Kth1;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Unit1 in 'Unit1.pas' {FrmMain},
+  datalar in 'datalar.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmMain, FrmMain);
+  Application.Run;
+end.

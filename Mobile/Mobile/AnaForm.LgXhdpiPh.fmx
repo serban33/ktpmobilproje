@@ -1,0 +1,17 @@
+inherited FrmAnaform_LgXhdpiPh: TFrmAnaform_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited StatusBar1: TStatusBar
+    Position.Y = 673.000000000000000000
+    Size.Width = 450.000000000000000000
+  end
+  inherited ToolBar1: TToolBar
+    Size.Width = 450.000000000000000000
+  end
+  inherited StyleBook1: TStyleBook
+    Styles = <
+      item
+      end>
+  end
+end

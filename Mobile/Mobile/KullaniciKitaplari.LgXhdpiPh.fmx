@@ -1,0 +1,20 @@
+inherited FrmKullaniciKitapListesi_LgXhdpiPh: TFrmKullaniciKitapListesi_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited ToolBar1: TToolBar
+    Size.Width = 450.000000000000000000
+  end
+  inherited ListBox1: TListBox
+    Size.Width = 450.000000000000000000
+    Size.Height = 647.000000000000000000
+    Viewport.Width = 450.000000000000000000
+    Viewport.Height = 551.000000000000000000
+    inherited SearchBox1: TSearchBox
+      Size.Width = 450.000000000000000000
+    end
+    inherited ListBoxHeader1: TListBoxHeader
+      Size.Width = 450.000000000000000000
+    end
+  end
+end

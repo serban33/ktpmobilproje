@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbkModelStoreContainer" CdmEntityContainer="DbkEntities">
+    <EntitySetMapping Name="TblKategori">
+      <EntityTypeMapping TypeName="DbkModel.TblKategori">
+        <MappingFragment StoreEntitySet="TblKategori">
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKitaplar">
+      <EntityTypeMapping TypeName="DbkModel.TblKitaplar">
+        <MappingFragment StoreEntitySet="TblKitaplar">
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="Yazar" ColumnName="Yazar" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="YayınEvi" ColumnName="YayınEvi" />
+          <ScalarProperty Name="Konusu" ColumnName="Konusu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKullanici">
+      <EntityTypeMapping TypeName="DbkModel.TblKullanici">
+        <MappingFragment StoreEntitySet="TblKullanici">
+          <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKullaniciKitaplar">
+      <EntityTypeMapping TypeName="DbkModel.TblKullaniciKitaplar">
+        <MappingFragment StoreEntitySet="TblKullaniciKitaplar">
+          <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+          <ScalarProperty Name="VerilmeTarihi" ColumnName="VerilmeTarihi" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="TelefonNumarasi" ColumnName="TelefonNumarasi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwKullaniciKitapListesi">
+      <EntityTypeMapping TypeName="DbkModel.VwKullaniciKitapListesi">
+        <MappingFragment StoreEntitySet="VwKullaniciKitapListesi">
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Konusu" ColumnName="Konusu" />
+          <ScalarProperty Name="YayınEvi" ColumnName="YayınEvi" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Yazar" ColumnName="Yazar" />
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+          <ScalarProperty Name="TelefonNumarasi" ColumnName="TelefonNumarasi" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="VerilmeTarihi" ColumnName="VerilmeTarihi" />
+          <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwKullanicilar">
+      <EntityTypeMapping TypeName="DbkModel.VwKullanicilar">
+        <MappingFragment StoreEntitySet="VwKullanicilar">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KullaniciId" ColumnName="KullaniciId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,51 @@
+unit YeniKitap;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Edit, FMX.ListBox,datalar;
+
+type
+  TFrmYeniKitap = class(TForm)
+    ToolBar1: TToolBar;
+    Button1: TButton;
+    Layout1: TLayout;
+    Label1: TLabel;
+    CmbKategori: TComboBox;
+    Label2: TLabel;
+    TxtYazar: TEdit;
+    Label3: TLabel;
+    TxtYayinEvi: TEdit;
+    Label4: TLabel;
+    TxtKonu: TEdit;
+    Label5: TLabel;
+    TxtAd: TEdit;
+    Panel1: TPanel;
+    Button2: TButton;
+    Button3: TButton;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmYeniKitap: TFrmYeniKitap;
+  ws : datalar.DatalarSoap;
+
+implementation
+
+{$R *.fmx}
+
+uses Unit1;
+
+procedure TFrmYeniKitap.FormCreate(Sender: TObject);
+begin
+if ws = nil then
+   ws:=datalar.GetDatalarSoap();
+end;
+
+end.

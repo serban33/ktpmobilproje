@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblKategori">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblKitaplar">
+    <Key>
+      <PropertyRef Name="KitapId" />
+    </Key>
+    <Property Name="KitapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriId" Type="int" />
+    <Property Name="Yazar" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Konu" Type="nvarchar" MaxLength="50" />
+    <Property Name="YayınEvi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Konusu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblKullanici">
+    <Key>
+      <PropertyRef Name="KullaniciId" />
+    </Key>
+    <Property Name="KullaniciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblKullaniciKitaplar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciId" Type="int" />
+    <Property Name="VerilmeTarihi" Type="date" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="TC" Type="nvarchar" MaxLength="11" />
+    <Property Name="TelefonNumarasi" Type="nvarchar" MaxLength="12" />
+    <Property Name="KitapId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Dbk.dbo.VwKullaniciKitapListesi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwKullaniciKitapListesi">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Yazar" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="KullaniciId" Type="int" />
+    <Property Name="VerilmeTarihi" Type="date" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="TC" Type="nvarchar" MaxLength="11" />
+    <Property Name="TelefonNumarasi" Type="nvarchar" MaxLength="12" />
+    <Property Name="KitapId" Type="int" />
+    <Property Name="KategoriId" Type="int" />
+    <Property Name="Yazar" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Konu" Type="nvarchar" MaxLength="50" />
+    <Property Name="YayınEvi" Type="nvarchar" MaxLength="100" />
+    <Property Name="Konusu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Dbk.dbo.VwKullanicilar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwKullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciId" />
+    </Key>
+    <Property Name="KullaniciId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DbkModelStoreContainer">
+    <EntitySet Name="TblKategori" EntityType="Self.TblKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKitaplar" EntityType="Self.TblKitaplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKullanici" EntityType="Self.TblKullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKullaniciKitaplar" EntityType="Self.TblKullaniciKitaplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VwKullaniciKitapListesi" EntityType="Self.VwKullaniciKitapListesi" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwKullaniciKitapListesi].[Id] AS [Id], 
+    [VwKullaniciKitapListesi].[KullaniciId] AS [KullaniciId], 
+    [VwKullaniciKitapListesi].[VerilmeTarihi] AS [VerilmeTarihi], 
+    [VwKullaniciKitapListesi].[AdSoyad] AS [AdSoyad], 
+    [VwKullaniciKitapListesi].[TC] AS [TC], 
+    [VwKullaniciKitapListesi].[TelefonNumarasi] AS [TelefonNumarasi], 
+    [VwKullaniciKitapListesi].[KitapId] AS [KitapId], 
+    [VwKullaniciKitapListesi].[KategoriId] AS [KategoriId], 
+    [VwKullaniciKitapListesi].[Yazar] AS [Yazar], 
+    [VwKullaniciKitapListesi].[Konu] AS [Konu], 
+    [VwKullaniciKitapListesi].[YayınEvi] AS [YayınEvi], 
+    [VwKullaniciKitapListesi].[Konusu] AS [Konusu], 
+    [VwKullaniciKitapListesi].[Ad] AS [Ad]
+    FROM [dbo].[VwKullaniciKitapListesi] AS [VwKullaniciKitapListesi]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwKullanicilar" EntityType="Self.VwKullanicilar" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwKullanicilar].[KullaniciId] AS [KullaniciId], 
+    [VwKullanicilar].[KullaniciAdi] AS [KullaniciAdi]
+    FROM [dbo].[VwKullanicilar] AS [VwKullanicilar]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
